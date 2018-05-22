@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"
+          media="screen">
+    <link href="../css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">
+    <script type="text/javascript" src="../js/jquery1.8.js"></script>
+    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../js/listByType.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="common-head" class="common-head">
+                <div class="tools">
+                    <p id="header" class="text-left">
+                        欢迎来到商城,请<a href="login.html">登陆</a>|<a href="index/register.html">免费注册</a>
+                    </p>
+                </div>
+            </div>
+            <div class="head">
+                <div class="logo">
+                    <a href="http://localhost:8080/Store">
+                        <img alt="logo" src="../images/icon.ico"/>
+                    </a>
+                </div>
+                <hr/>
+                <br>
+                <div class="common-search" style="margin-left: 25%">
+                    <form class="form-inline">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="keyword" name="keyword"
+                                       placeholder="请输入关键字"/> <input type="button"
+                                                                     class="btn btn-success" onclick="search()"
+                                                                     value="Search">
+                            </div>
+                        </div>
+                    </form>
+                    <small>热搜：<a href="searchl.html?p=ssd">ssd</a>&nbsp;&nbsp;<a href="searchl.html?p=长袖">长袖</a></small>
+                </div>
+                <div id="condition-sort">
+                    <ul>
+                        <li><a id="moren" href="javascript:void(0)">
+                            <div class="condition condition-default">默认</div>
+                        </a></li>
+                        <li><a id="renqi" href="javascript:void(0)">
+                            <div class="condition">按人气</div>
+                        </a></li>
+                        <li><a id="xiaoliang" href="javascript:void(0)">
+                            <div class="condition">按销量</div>
+                        </a></li>
+                        <li><a id="jiage" href="javascript:void(0)">
+                            <div class="condition">按价格</div>
+                        </a></li>
+                    </ul>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div class="list-banner">
+                    <span id="category">当前分类</span>
+                </div>
+                <div class="list-sell" id="list-sell">
+                    <ul id="sellbooks">
+                    </ul>
+                </div>
+                <div id="Crousetable"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

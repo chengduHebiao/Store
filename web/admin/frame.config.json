@@ -1,0 +1,97 @@
+﻿{
+  "logo": "img/logo.png",
+  "themes": [{
+    "name": "pink",
+    "title": "粉红色",
+    "color": "#DC4FAD"
+  }, {
+    "name": "dark-red",
+    "title": "深红色",
+    "color": "#AC193D"
+  }, {
+    "name": "dark-orange",
+    "title": "深橙色",
+    "color": "#D24726"
+  }, {
+    "name": "orange",
+    "title": "橙色",
+    "color": "#FF8F32"
+  }, {
+    "name": "light-green",
+    "title": "浅绿色",
+    "color": "#82BA00"
+  }, {
+    "name": "green",
+    "title": "绿色",
+    "color": "#008A17"
+  }, {
+    "name": "light-cyan",
+    "title": "浅青色",
+    "color": "#03B3B2"
+  }, {
+    "name": "cyan",
+    "title": "青色",
+    "color": "#008299"
+  }, {
+    "name": "light-blue",
+    "title": "浅蓝色",
+    "color": "#5DB2FF"
+  }, {
+    "name": "blue",
+    "title": "蓝色",
+    "color": "#0072C6"
+  }, {
+    "name": "dark-blue",
+    "title": "深蓝色",
+    "color": "#4617B4"
+  }, {
+    "name": "purple",
+    "title": "紫色",
+    "color": "#8C0095"
+  }],
+  "menus": [{
+    "name": "menu1",
+    "title": "信息",
+    "icon": "img/works.png",
+    "menus": [{
+      "name": "menu1",
+      "title": "信息管理",
+      "selected": true,
+      "expanded": true,
+      "menus": [{
+        "name": "menu2",
+        "title": "信息管理",
+        "href": "post.html"
+      }]
+    }]
+  }, {
+    "name": "menu2",
+    "title": "商城管理",
+    "icon": "img/works.png",
+    "menus": [{
+      "name": "menu1",
+      "title": "分类设置",
+      "expanded": true,
+      "menus": [{
+        "name": "menu1",
+        "title": "分类管理",
+        "href": "category.html"
+      }]
+    }, {
+        "name": "menu2",
+        "title": "商品管理",
+        "href": "",
+        "selected": true,
+        "expanded": true,
+        "menus": [{
+            "name": "menu1",
+            "title": "商品管理",
+            "href": "books.html"
+          },{
+            "name": "menu2",
+            "title": "评价管理",
+            "href": "comments.html"
+          }]
+      }]
+  }]
+}

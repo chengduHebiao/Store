@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Books Manage</title>
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../css/style.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="../css/admin.css">
+<link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css"> 
+<script type="text/javascript" src="../js/jquery1.8.js"></script>
+<script src="../jqueryfileupload/js/vendor/jquery.ui.widget.js"></script>
+<script src="../jqueryfileupload/js/jquery.iframe-transport.js"></script>
+<script src="../jqueryfileupload/js/jquery.fileupload.js"></script>
+<script type="text/javascript" src="../easyui/jquery.easyui.min.js" ></script>
+<script type="text/javascript" src="../easyui/locale/easyui-lang-zh_CN.js" ></script>
+<script type="text/javascript" src="../js/admin/books.js"></script>
+</head>
+  
+  <body>
+   <hr />
+     <div class="common-table">
+     	<table id="catdg" toolbar="#toolbar" class="easyui-datagrid" singleSelect="true">
+     	<thead>
+     		<tr>
+     			<th data-options="field:'cid', width:100, sortable:true">编号</th>
+     			<th data-options="field:'categoryName', width:250">栏目名称</th>
+     			<th data-options="field:'description', width:100">描述</th>
+     		</tr>
+     	</thead>
+     	</table>
+     </div>
+     <div id="toolbar">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" onclick="newCat()">添加</a>	
+   		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" onclick="rmCat()">删除</a>
+   	 </div>
+   	 <div id="addcatdlg" class="easyui-dialog" closed="" buttons="#catdlgbtns" style="width:420px;300px;" >
+   	 	<div class="ftitle"><center>添加栏目</center></div>
+   		<hr/>
+    	<form id="catForm" method="post">
+    		<div class="fitem">
+    			<label>栏目名称：</label>
+    			<input name="categoryName" validType="length[4,15]" missingMessage="请输入栏目名" class="easyui-validatebox" required="true" />
+    		</div>
+    		<br/>
+    		<div class="fitem">
+    			<label>栏目描述：</label>
+    			<input name="description" required="true" missingMessage="请输入栏目描述" class="easyui-validatebox" />
+    		</div>
+    	</form>
+   	 </div>
+   	 <div id="catdlgbtns">
+   	 	<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="addCat()" >添加</a>
+   	 	<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#addcatdlg').dialog('close')" >取消</a>
+   	 </div>
+  </body>
+</html>

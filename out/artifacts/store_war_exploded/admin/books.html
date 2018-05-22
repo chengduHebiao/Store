@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Books Manage</title>
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../css/style.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="../css/admin.css">
+<link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css"> 
+<script type="text/javascript" src="../js/jquery1.8.js"></script>
+<script src="../jqueryfileupload/js/vendor/jquery.ui.widget.js"></script>
+<script src="../jqueryfileupload/js/jquery.iframe-transport.js"></script>
+<script src="../jqueryfileupload/js/jquery.fileupload.js"></script>
+<script type="text/javascript" src="../easyui/jquery.easyui.min.js" ></script>
+<script type="text/javascript" src="../easyui/locale/easyui-lang-zh_CN.js" ></script>
+<script type="text/javascript" src="../js/admin/books.js"></script>
+</head>
+<body style="width: 100%; height: 100%">
+	<div class="head">
+		分类:<select id="book_category"></select>
+	</div>
+	<div class="content">
+		<div class="common-content" style="margin-left: 1%; margin-left: 1%">
+			<table id="bookdg" toolbar="#tb">
+			</table>
+		</div>
+		<div id="tb">
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" onclick="showdlg()" ></a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" onclick="showEditdlg()"></a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" onclick="removeBooks()"></a>
+		</div>
+		<div id="bookdlg" class="easyui-dialog" title="商品信息" buttons="#dlgbtns" closed="true" style="width: 400; height: 600;" >
+			<form id="postform" class="form-horizontal">
+				<input id="bid" name="bid" type="hidden" />
+				<table>
+					<tr>
+						<td>商品名:</td>
+						<td><input class="easyui-validatebox" id="bookname" name="bookname" type="text" required="true" missingMessage="请输入商品名"/></td>
+						<td rowspan="3">图片:</td>
+						<td rowspan="3">
+							<div style="">
+								<div style="width:220px; height: 110px;">
+									 <img src=""
+										style="width:220px;height: 90px; background-color: #dcdfcf;"
+										alt="封面" title="商品封面" id="myPicture"> 
+								</div>
+								<button style="width:80px; background-color: #61AD02"
+									type="button"
+									onclick="document.getElementById('picture').click();">上传图片</button>
+								<div class="fileInput" style="display:none">
+									<input type="file" name="pic" id="picture" /> <input
+										type="hidden" name="picPath" id="myfilepath">
+								</div>
+								<input type="hidden" name="bookimage" id="bookimage" />
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>品牌:</td>
+						<td><input class="easyui-validatebox" id="author" name="author" type="text" required="true" missingMessage="请输入品牌"/></td>
+					</tr>
+					<tr>
+						<td colspan="4">&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>日期:</td>
+						<td><input class="easyui-datebox" id="publishdate" name="publishdate" required="true"/></td>
+						<td>类别:</td>
+						<td>
+							<select id="cid" name="cid">
+								
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4">&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>总量:</td>
+						<td><input class="easyui-validatebox" id="total" name="total" type="tel" required="true" missingMessage="请输入总量"/></td>
+						<td>备注:</td>
+						<td><input class="easyui-validatebox" id="publisher" name="publisher" type="text" required="true" missingMessage="备注"/></td>
+					</tr>
+					<tr>
+						<td colspan="4">&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>原价:</td>
+						<td><input class="easyui-validatebox" type="text" id="preprice" name="preprice" required="true" missingMessage="请输入原价" /></td>
+						<td>现价:</td>
+						<td><input class="easyui-validatebox" type="text" id="nowprice" name="nowprice" required="true" missingMeassage="请输入现价"/></td>
+					</tr>
+					<tr>
+						<td rowspan="4">描述:</td>
+						<td rowspan="4" colspan="3">
+							<input id="poloticstext" name="detail" class="easyui-textbox" data-options="multiline:true" style="width:485px; height: 100px"></input>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div id="dlgbtns">
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="addOrUpdateBook();">确定</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#bookdlg').dialog('close')">取消</a>
+		</div>
+	</div>
+</body>
+</html>

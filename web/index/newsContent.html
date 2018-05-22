@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>newsContent.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"
+	media="screen">
+<link href="../css/style.css" rel="stylesheet" />
+<link href="../css/content.css" rel="stylesheet" />
+<link href="../css/list.css" rel="stylesheet" />
+<link href="../css/citylist.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery1.8.js"></script>
+<script type="text/javascript" src="../js/newsContent.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="common-head" class="common-head">
+					<div class="tools">
+						<p id="header" class="text-left">
+							欢迎来到商城,请<a href="login.html">登陆</a>|<a href="register.html">免费注册</a>
+						</p>
+					</div>
+				</div>
+				<div class="head">
+					<div class="logo">
+						<a href="http://localhost:8080/Store">
+							<img alt="logo" src="../images/icon.ico" />
+						</a>
+					</div>
+					<hr />
+					<br>
+					<div class="common-search" style="margin-left: 25%">
+						<form class="form-inline">
+							<div class="control-group">
+								<div class="controls">
+									<input type="text" id="keyword" name="keyword"
+										placeholder="请输入关键字" /> <input type="button"
+										class="btn btn-success" onclick="search();" value="Search">
+								</div>
+							</div>
+						</form>
+						<small>热搜：<a href="searchl.html?p=ssd">ssd</a>&nbsp;&nbsp;<a href="searchl.html?p=长袖">长袖</a></small>
+					</div>
+				</div>
+				<hr align="center" width="1050" color="#B5AAA2" size="2">
+			</div>
+			<div class="news-content">
+				<div class="main" style="width:1000px; margin-top: 30px;">
+					<div class="news-list-left">
+						<div class="news-list-name">
+							<a>最新资讯</a> <br> <a> <span>the latest information</span>
+							</a>
+						</div>
+						<div class="news-list-title">
+							<p>
+								<a href="#">活动信息</a>
+							</p>
+						</div>
+						<p class="news-content-list">
+							<a>热门推荐</a>
+						</p>
+						<ul id="bestSelled">
+							<!-- <li><a> <img src="../images/book1.jpg" width="180"
+									height="90" />
+							</a> <br> <a class="case-right-name">商品名</a> <br> <b
+								class="case-right-detail"><font class="pre-price">原价:￥8000</font>
+									<br> 现价:<font style="color: red; weight:bold">￥1</font> </b></li>
+							<li><a> <img src="../images/book1.jpg" width="180"
+									height="90" />
+							</a> <br> <a class="case-right-name">商品名</a> <br> <b
+								class="case-right-detail"><font class="pre-price">原价:￥8000</font>
+									<br> 现价:<font style="color: red; weight:bold">￥1</font> </b></li>
+							<li><a> <img src="../images/book1.jpg" width="180"
+									height="90" />
+							</a> <br> <a class="case-right-name">商品名</a> <br> <b
+								class="case-right-detail"><font class="pre-price">原价:￥8000</font>
+									<br> 现价:<font style="color: red; weight:bold">￥1</font> </b></li> -->
+						</ul>
+					</div>
+					<div class="news-list-right">
+						<div class="news-list-top">
+							<span><strong></strong></span>
+							<div id="time" class="news--place">
+								<!-- 发布时间：2011年4月12日  &nbsp;&nbsp;&nbsp;&nbsp;点击量：123 -->
+							</div>
+						</div>
+						<div class="news-list-detail">
+							<ul>
+								<li>
+									<div class="news-detail-show">
+										<p id="title" align="center">标题</p>
+										<hr>
+										<span id="news_content">
+										<!-- 	不同的性倾向决定了人们愿意与同性还是异性恋爱。性倾向是一种自然现象，由于人类繁育后代本能，异性恋爱占绝对优势，否则物种将会灭绝。真爱是一种从内心发出的关心和照顾（关键是自爱、例如珍惜自己的身体及名誉，拥有自己的道德底线），它并不是别人眼中完美的匹配，它是两个相爱的人心灵能够契合，在能爱的时候懂得珍惜，在不能爱的时候懂得放手，不分性别（参见：[9] ），没有华丽的言语，没有哗众取宠的行动， 只有在点点滴滴一言一行中您能感受得到，平实而坚定，反之发誓、许诺说明了它的不确定，永远不要相信甜言蜜语。
+										 --></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+ <!-- 开启使用开发模式，详细错误提示 -->
+    <constant name="struts.devMode" value="false" />
+    <!-- 将对象交给spring管理 -->
+    <constant name="struts.objectFactory" value="spring" />
+    <!-- 指定资源编码类型 -->
+    <constant name="struts.i18n.encoding" value="UTF-8" /> 
+	<!-- 指定每次请求到达，重新加载资源文件 -->
+    <constant name="struts.i18n.reload" value="false" />
+    <!-- 指定每次配置文件更改后，自动重新加载 -->
+    <constant name="struts.configuration.xml.reload" value="false" />
+    <!-- 默认后缀名 -->
+     <constant name="struts.action.extension" value="action,jhtml,," />
+	<!-- Struts Annotation -->
+	<!-- Ajax后台管理 -->
+	<package name="ajax" extends="json-default,struts-default">
+		<action name="*_*_JsonAction" method="{2}" class="dysec.action.{1}">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result type="json" name="error">
+				<param name="root">map</param>
+			</result>
+		</action>
+	</package>
+</struts>    

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>cart.html</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"
+	media="screen">
+<link href="../css/style.css" rel="stylesheet" />
+<link href="../css/content.css" rel="stylesheet" />
+<link href="../css/list.css" rel="stylesheet" />
+<link href="../css/citylist.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery1.8.js"></script>
+<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/jquery.leanModal.min.js"></script>
+<script type="text/javascript" src="../js/cart.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="common-head" class="common-head">
+					<div class="tools">
+						<p id="header" class="text-left">
+							欢迎来到商城,请<a href="login.html">登陆</a>|<a href="register.html">免费注册</a>
+						</p>
+					</div>
+				</div>
+				<div class="head">
+					<div class="logo">
+						<a href="http://localhost:8080/Store"><img alt="logo" src="../images/icon.ico" /></a>
+					</div>
+					<hr />
+					<br>
+					<div class="common-search" style="margin-left: 25%">
+						<form class="form-inline">
+							<div class="control-group">
+								<div class="controls">
+									<input type="text" id="keyword" name="keyword"
+										placeholder="请输入关键字" /> <input type="button"
+										class="btn btn-success" onclick="search();" value="Search">
+								</div>
+							</div>
+						</form>
+						<small>热搜：<a href="searchl.html?p=ssd">ssd</a>&nbsp;&nbsp;<a href="searchl.html?p=长袖">长袖</a></small>
+					</div>
+				</div>
+				<hr align="center" width="1050" color="#B5AAA2" size="2">
+
+				<div class="news-content">
+					<div class="main" style="width:1000px; margin-top: 30px;">
+						<div class="news-list-left">
+							<div class="news-list-name">
+								<a id="userName">用户名</a> <br> <a> <span>我的购物车</span></a>
+							</div>
+							<div class="news-list-title">
+								<p>
+									<a href="#">个人信息</a>
+								</p>
+							</div>
+							<p class="news-content-list">
+								<a>热门推荐</a>
+							</p>
+							<ul id="bestSelled">
+
+							</ul>
+						</div>
+						<div class="news-list-right">
+							<div class="news-list-top">
+								<span><strong><a onclick="commitCart()" href="javascript:void(0)">提交</a></strong></span>
+								<div id="time" class="news--place">
+									上次登录时间：2011-12-30 13:28:34
+								</div>
+								<br>
+								<div class="news-list-detail">
+									<ul id="carts">
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

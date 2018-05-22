@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* 房源详情页内容 宣传头部CSS */
+.content { width:970px; height:1000px; margin:0 auto; }
+.content .house-banner{height:400px;}
+.content .house-banner .place{margin:0px 0px 0px 40px;}
+.content .house-banner .house-case{margin:20px 0px 0px 0px;}
+.content .house-banner .house-case-title{height:30px; margin:30px 0px 20px 0px; border-style:none none solid none; border-width:5px; border-color:green; }
+.content .house-banner .house-case-images{margin-left:20px; width:380px; height:380px; float:left;}
+/* 房源详情页  宣传效果滚动图片  */
+.c2_l{width:380px; height:370px; margin:0; display:inline; float:left;}
+.c2_slide{width:380px; height:370px; position:relative; overflow:hidden;}
+.c2_slide ul{width:1960px; height:370px; position:absolute; top:0; left:0;}
+.c2_slide li{float:left; width:380px; height:100%; position:relative;}
+.c2_slide li span{display:block; width:100%; height:35px; position:absolute; bottom:0; left:0; background:url(../Img/r.png) repeat-x 0 -91px; color:#FFFFFF; font:16px/35px microsoft yahei; text-align:center;}
+.c2_paging{width:400px;height:85px;}
+.c2_paging li{float:left;margin-right:18px; position:relative; }
+.c2_paging li img{width:80px; height:80px;}
+.c2_paging li.active img{border-style:solid; border-color:red; border-width:1px;width:80px;height:80px;}
+.content .house-banner .house-case-content{margin-left:70px; float:left}
+.Price{color:red;}
+#tel{margin-top:30px; width:410px; height:61px; background-image:url(../Img/tel.png); background-repeat:no-repeat; float:left;}
+#tel span{ display:block; margin:12px 0 0 80px; font-size:30px; font-family:"黑体"; color:red;}
+
+
+.groupbuying-Price{width:480px; height:45px; border-bottom:1px #ccc dotted; font-size:24px; color:red;}
+.groupbuying-Price b{color:#999; font-size:14px; padding-left:20px; text-decoration:line-through;}
+
+
+/*  房源详情描述 CSS  */
+.house-case-details{margin-top:10px; display:block;}
+.house-case-left{float:left; width:680px; height:600px;}
+/* h2{position:relative; left:20px; top:10px;} */
+.house-case-type{height:500px; padding:0 12px; border-style:solid; border-color:green #B5AAA2 #B5AAA2 #B5AAA2; border-width:5px 1px 1px 1px;}
+#detail{height:210px; margin-top:15px; line-height:28px;}
+#detail img{float:left; clear:left;}
+.house-type-title{display:block; margin-left:20px; font-size:22px; font-family:'黑体'; float:left;}
+.house-case-type li{font-size:14px; font-family:"微软雅黑"; position:relative; left:20px;}
+.house-case-type span{font-size:14px; font-family:"微软雅黑"; float:left;}
+.house-type-more{text-align:right; padding-right:25px; color:red;}
+
+h2{position:relative; left:20px; font-weight:normal; font-family:"微软雅黑";}
+
+/* 房源详情的表格 CSS*/
+.house-case-description{height:480px; clear:both;}
+table, td{font:100% Arial, Helvetica, sans-serif;}
+table{width:640px;border-collapse:collapse;margin:20px 0 0 20px;}
+th, td{text-align:left;padding:10px; border:1px solid #E7E3E0;}
+th{background:#328aa4;}
+td{background:#e5f1f4;}
+.td1{width:100px;}
+.td2{width:200px;}
+
+/* tablecloth styles */
+
+tr.even td{background:#e5f1f4;}
+tr.odd td{background:#f8fbfc;}
+
+th.over, tr.even th.over, tr.odd th.over{background:#4a98af;}
+th.down, tr.even th.down, tr.odd th.down{background:#bce774;}
+th.selected, tr.even th.selected, tr.odd th.selected{}
+
+td.over, tr.even td.over, tr.odd td.over{background:#ecfbd4;}
+td.down, tr.even td.down, tr.odd td.down{background:#bce774;color:#fff;}
+td.selected, tr.even td.selected, tr.odd td.selected{background:#bce774;color:#555;}
+
+/* use this if you want to apply different styleing to empty table cells*/
+td.empty, tr.odd td.empty, tr.even td.empty{background:#fff;}
+
+/*推荐 CSS*/
+.house-case-right{width:250px; height:600px; margin-top:10px; float:right;}
+.house-case-right p{background-color:green; height:35px;}
+.house-case-right span{font-size:18px; font-family:"微软雅黑"; color:#FFF; position:relative; left:20px; top:4px;}
+.house-case-right li{display:block; margin:0 0 15px 20px;}
+.house-case-right li img{width:206px; height:110px;}
+.case-right-name{font-size:16px; font-family:"微软雅黑"; font-weight:bold; color:#000; position:relative; bottom:9px;}
+.case-right-detail{font-size:14px; font-family:"微软雅黑"; font-weight:normal; color:#434343; line-height:24px; position:relative; bottom:7px;}
+
+
+.house-case-recommend{height:335px; position:relative; bottom:35px; float: left;}
+.house-case-recommend hr{margin-bottom:10px; width:950; border:2px solid; color:green;}
+.house-case-recommend ul li{display:block; float:left; margin-right:10px; font-size:16px; font-family:"微软雅黑"; font-weight:bold; color:#000; line-height:26px; text-align:center;}
+.house-case-recommend img{margin:10px 7px 10px 10.5px;}
+.house-case-recommend ul li span{font-size:15px; font-weight:normal; color:red;}
