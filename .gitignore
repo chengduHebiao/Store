@@ -1,0 +1,25 @@
+# Eclipse project files
+.project
+.classpath
+.settings
+
+# IntelliJ IDEA project files and directories
+*.iml
+*.ipr
+*.iws
+.idea/
+
+
+
+# Build targets
+/target
+*/target
+
+# Report directories
+/web/WEB-INF/classes
+*/web/WEB-INF/classes
+
+
+dependency-reduced-pom.xml
+
+*/.unison.*
