@@ -19,6 +19,9 @@
 /web/WEB-INF/classes
 */web/WEB-INF/classes
 
+/out
+*/out
+
 
 dependency-reduced-pom.xml
 
