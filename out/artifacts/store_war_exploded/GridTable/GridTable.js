@@ -1,7 +1,7 @@
 /**
  * jQuery
  */
-$(function (){
+$(function () {
     var addGrid = function (t, options) {
         var p = $.extend({}, {
             expandFlag: '',
@@ -74,7 +74,7 @@ $(function (){
             max_height: 'auto',		       //最大高度
             line_height: 40,		       //单行行高
             preColumnWidth: 180,		   //默认列宽度
-            srcollWidth:5, 				   //默认滚动条宽度
+            srcollWidth: 5, 				   //默认滚动条宽度
             rp: 10,					       //表格当前每页可装载的记录条数
             rps: [5, 10, 15, 30, 50],	       //表格每页可装载的记录条数分配
             totalRecords: 0,		       //表格总记录数
@@ -142,7 +142,7 @@ $(function (){
                     {
                         input: 'label',
                         type: 'label',
-                        show: Msg.gridParam.pageShowCount,
+                        show: '每页显示：',
                         fix: true,
                         name: 'plabel',
                         ids: 'plabel_0'
@@ -159,7 +159,7 @@ $(function (){
                     {
                         input: 'label',
                         type: 'label',
-                        show: Msg.gridParam.emptyMsg,
+                        show: "无记录",
                         fix: true,
                         name: 'plabel',
                         ids: 'plabel_totalRecords'
@@ -227,7 +227,7 @@ $(function (){
                     {
                         input: 'label',
                         type: 'label',
-                        show: Msg.gridParam.beforePageText,
+                        show: "第",
                         fix: true,
                         name: 'plabel',
                         ids: 'plabel_3',
@@ -245,7 +245,7 @@ $(function (){
                     {
                         input: 'label',
                         type: 'label',
-                        show: Msg.gridParam.afterPageText,
+                        show: '页 / 共',
                         fix: true,
                         name: 'plabel',
                         ids: 'plabel_4',
@@ -263,7 +263,7 @@ $(function (){
                     {
                         input: 'label',
                         type: 'label',
-                        show: Msg.gridParam.mPageText,
+                        show: '页',
                         fix: true,
                         name: 'plabel',
                         ids: 'plabel_5',
@@ -272,7 +272,7 @@ $(function (){
                     {
                         input: 'label',
                         type: 'label',
-                        show: Msg.gridParam.jumpTo,
+                        show: '跳到第',
                         fix: true,
                         name: 'plabel',
                         ids: 'plabel_6',
@@ -293,7 +293,7 @@ $(function (){
                     {
                         input: 'label',
                         type: 'label',
-                        show: Msg.gridParam.mPageText,
+                        show: '页',
                         fix: true,
                         name: 'plabel',
                         ids: 'plabel_7',
@@ -321,7 +321,7 @@ $(function (){
              */
             init: function () {
                 g.p = p;
-                if((main.getBrowser() && main.getBrowser().msie)){
+                if ((main.getBrowser() && main.getBrowser().msie)) {
                     p.srcollWidth = 20;
                 }
                 p.selectedRecords = [];
@@ -347,20 +347,20 @@ $(function (){
                 });
                 g.resize();
             },
-            settingSroll:function(){
-                var tablDivclass ="GridTableBodyDiv .wrapper";
+            settingSroll: function () {
+                var tablDivclass = "GridTableBodyDiv .wrapper";
                 var tabs = $('.GridTableDiv');
                 var srcollWidth = p.srcollWidth;
-                if(tabs && tabs.length>0){
-                    for(var i = 0; i< tabs.length; i++){
+                if (tabs && tabs.length > 0) {
+                    for (var i = 0; i < tabs.length; i++) {
                         var tabChld = tabs[i];
-                        if($(tabChld).find('.'+tablDivclass)){
+                        if ($(tabChld).find('.' + tablDivclass)) {
                             var ow = tabChld.offsetWidth;
-                            var tabDiv = $(tabChld).find('.'+tablDivclass);
-                            if(tabDiv[0].scrollHeight >tabDiv[0].offsetHeight){
-                                tabDiv.css("width",((ow+srcollWidth)/(ow+1))*100+"%");
-                            }else{
-                                tabDiv.css("width",((ow)/ow)*100+"%");
+                            var tabDiv = $(tabChld).find('.' + tablDivclass);
+                            if (tabDiv[0].scrollHeight > tabDiv[0].offsetHeight) {
+                                tabDiv.css("width", ((ow + srcollWidth) / (ow + 1)) * 100 + "%");
+                            } else {
+                                tabDiv.css("width", ((ow) / ow) * 100 + "%");
                             }
                         }
                     }
@@ -642,7 +642,7 @@ $(function (){
                 $('#' + p.wholeID).append($("<div class='GridTableHeaderDiv' id='" + p.headerID + "'/>").append(content));
                 g.createHeaderTable(content);
 
-                p.columnFilter && g.createHeaderFilter();
+                //p.columnFilter && g.createHeaderFilter();
             },
             /**
              * 创建表格表头table
@@ -687,7 +687,7 @@ $(function (){
                     var item_all = $('<li>').addClass('filter-item');
                     var checkbox_all = $('<input type="checkbox">').attr('id', 'column_filter_all')
                         .attr('name', 'allOption');
-                    item_all.append($('<label for="column_filter_all"/>').append(checkbox_all).append(Msg.all));
+                    item_all.append($('<label for="column_filter_all"/>').append(checkbox_all).append('全部'));
                     checkbox_all.click(function () {
                         $('.item :checkbox', box).prop('checked', !!this.checked);
                     });
@@ -730,8 +730,8 @@ $(function (){
                 settingBox.append($('<ul/>'));
 
                 var btnBar = $('<div/>').addClass('button-bar');
-                var okBtn = $('<button/>').attr('type', 'button').addClass('btn').text(Msg.sure);
-                var cancelBtn = $('<button/>').attr('type', 'button').addClass('btn').text(Msg.cancel);
+                var okBtn = $('<button/>').attr('type', 'button').addClass('btn').text('确定');
+                var cancelBtn = $('<button/>').attr('type', 'button').addClass('btn').text('取消');
 
                 // 事件 - 确认按钮
                 okBtn.click(function () {
@@ -1302,7 +1302,7 @@ $(function (){
                             cell.attr('value', value);
                             cell.data('value', value);
                             cell.attr('title', value);
-                            div.parent().attr('title',value);
+                            div.parent().attr('title', value);
                             trContent.data('record', record);
                             if (g.map.contains(record[p.idProperty || p.colModelCopy[0].name])) {
                                 g.map.put(record[p.idProperty || p.colModelCopy[0].name], record);
@@ -1328,7 +1328,7 @@ $(function (){
 
             createRows: function (context, dataList, type) {
                 //console.time('createRows');
-                if(!g.indexMap || type != "subset") g.indexMap = {};
+                if (!g.indexMap || type != "subset") g.indexMap = {};
                 var dfd = $.Deferred();
                 $.each(dataList, function (i, t) {
                     var trContent = g.createRow(t, i);
@@ -1397,7 +1397,7 @@ $(function (){
                     var btrs = $('#' + p.bodyID).find('tr:not(.child)');
 
                     if (p.onLoadReady) {
-                        p.onLoadReady(p.data, btrs, htrs, p.totalRecords,g.indexMap);
+                        p.onLoadReady(p.data, btrs, htrs, p.totalRecords, g.indexMap);
                     }
                     if (p.isSearchRecordSelected || p.isRecordSelected) {
                         var num = 0;
@@ -1684,14 +1684,14 @@ $(function (){
              * @param cell 指定单元格
              * @param value 值
              */
-            setRowData:function(record,np){
+            setRowData: function (record, np) {
                 var index = g.indexMap[record[p.idProperty]];
-                if(!index && index!=0) return false;
+                if (!index && index != 0) return false;
                 var trContent = $('#' + p.bodyID).find('tr[index=' + index + ']');
                 $.each(p.colModel, function (i, t) {
                     var name = t.name;
-                    if(np){
-                        if(($.isArray(np) && $.inArray(name,np)>=0) || np==name){
+                    if (np) {
+                        if (($.isArray(np) && $.inArray(name, np) >= 0) || np == name) {
                             return true;
                         }
                     }
@@ -1703,10 +1703,10 @@ $(function (){
                     }
                     var oldValue = $(cell).data('value');
                     record[name] = value;
-                    if(oldValue!=value){
+                    if (oldValue != value) {
                         $(cell).attr('value', value);
                         $(cell).data('value', value);
-                        $(cell).parent('title',value);
+                        $(cell).parent('title', value);
                     }
 
                 });
@@ -1899,7 +1899,7 @@ $(function (){
                         $(this).removeClass('SelectedHeaderLine');
                     }
                 });
-                $('#' + p.pageBarID + "plabel_totalRecords").html(Msg.gridParam.procMsg);
+                $('#' + p.pageBarID + "plabel_totalRecords").html('正在加载...');
                 if (p.url) {
                     $.http.ajax(p.url, p.params, function (data) {
                         if (data.success) {
@@ -1910,12 +1910,12 @@ $(function (){
                                 p.totalRecords = data.data[p.total] ? data.data[p.total] : 0;
                                 p.data = data.data[p.list] ? data.data[p.list] : [];
                             } else {
-                                $('#' + p.pageBarID + "plabel_totalRecords").html(Msg.gridParam.emptyMsg);
+                                $('#' + p.pageBarID + "plabel_totalRecords").html('没有相关记录');
                                 p.totalRecords = 0;
                                 p.data = [];
                             }
                         } else {
-                            $('#' + p.pageBarID + "plabel_totalRecords").html(Msg.gridParam.emptyMsg);
+                            $('#' + p.pageBarID + "plabel_totalRecords").html('没有相关记录');
                             if (p.loadError) {
                                 p.loadError(data.data);
                             }
@@ -1924,7 +1924,7 @@ $(function (){
                         }
                         g.addData();
                     }, function (data) {
-                        $('#' + p.pageBarID + "plabel_totalRecords").html(Msg.gridParam.emptyMsg);
+                        $('#' + p.pageBarID + "plabel_totalRecords").html('没有相关记录');
                         if (p.loadError) {
                             p.loadError(data.data || data);
                         }
@@ -1945,7 +1945,7 @@ $(function (){
                         p.totalRecords = data.data[p.total] ? data.data[p.total] : 0;
                         p.data = data.data[p.list] ? data.data[p.list] : [];
                     } else {
-                        $('#' + p.pageBarID + "plabel_totalRecords").html(Msg.gridParam.emptyMsg);
+                        $('#' + p.pageBarID + "plabel_totalRecords").html('没有相关记录');
                         p.totalRecords = 0;
                         p.data = [];
                     }
@@ -1957,10 +1957,10 @@ $(function (){
                 } else {
                     setTimeout(function () {
                         if (p.totalRecords == 0) {
-                            $('#' + p.pageBarID + "plabel_totalRecords").html(Msg.gridParam.emptyMsg);
+                            $('#' + p.pageBarID + "plabel_totalRecords").html('没有相关记录');
                         } else {
                             $('#' + p.pageBarID + "plabel_totalRecords")
-                                .html(String.format(Msg.gridParam.displayMsg, p.totalRecords));
+                                .html(String.format('共{0}条记录', p.totalRecords));
                         }
                     }, 100);
                 }
@@ -2049,7 +2049,7 @@ $(function (){
             });
         },
 
-        GridTableSearchpData : function(p){
+        GridTableSearchpData: function (p) {
             return this.each(function () {
                 if (this.grid) {
                     this.p = $.extend(this.p, p);
@@ -2115,7 +2115,7 @@ $(function (){
          * idValue idProperty 的值
          * callback 回调方法
          */
-        GridTableUpdateOnePropery:function(pname,pvalue,idValue,callback){
+        GridTableUpdateOnePropery: function (pname, pvalue, idValue, callback) {
             return this.each(function () {
                 var self = this;
                 var index = self.grid.indexMap[idValue];
@@ -2144,12 +2144,12 @@ $(function (){
             return this.each(function () {
                 var self = this;
                 if (!(cell instanceof jQuery) || !((typeof HTMLElement === 'object') ?
-                    function (obj) {
-                        return obj instanceof HTMLElement;
-                    } :
-                    function (obj) {
-                        return obj && typeof obj === 'object' && obj.nodeType === 1 && typeof obj.nodeName === 'string';
-                    })) {
+                        function (obj) {
+                            return obj instanceof HTMLElement;
+                        } :
+                        function (obj) {
+                            return obj && typeof obj === 'object' && obj.nodeType === 1 && typeof obj.nodeName === 'string';
+                        })) {
                     var index = cell.index || self.grid.indexMap[cell.id], name = cell.name;
                     if (index === undefined) {
                         $.each(self.p.data, function (i, t) {
@@ -2170,16 +2170,16 @@ $(function (){
          * @param data 原始数据
          * @param callback
          */
-        GridTableUpdateRow : function(data,np,callback){
+        GridTableUpdateRow: function (data, np, callback) {
             return this.each(function () {
                 var self = this;
-                if(!data || !$.isArray(data) ){
-                    callback && callback instanceof Function && callback(data,false);
-                }else{
-                    $.each(data,function(t,e){
-                        self.grid.setRowData(e,np);
+                if (!data || !$.isArray(data)) {
+                    callback && callback instanceof Function && callback(data, false);
+                } else {
+                    $.each(data, function (t, e) {
+                        self.grid.setRowData(e, np);
                     });
-                    callback && callback instanceof Function && callback(data,true);
+                    callback && callback instanceof Function && callback(data, true);
                 }
             });
         },

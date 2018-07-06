@@ -19,9 +19,9 @@
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/store?useUnicode=true&amp;characterEncoding=UTF-8"/>
-        <property name="user" value="root"/>
-        <property name="password" value="ying19920825"/>
+        <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/store?user=root&amp;password=ying19920825&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
+       <!-- <property name="user" value="root"/>
+        <property name="password" value="ying19920825"/>-->
         <property name="minPoolSize" value="5"/>
         <property name="maxPoolSize" value="20"/>
         <property name="maxStatements" value="10"/>
